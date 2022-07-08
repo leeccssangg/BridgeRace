@@ -6,17 +6,7 @@ using DG.Tweening;
 public class Stack : AllPool
 {
     public SpawnObject spawnObject;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void MoveToPlayerJump(BaseActor baseActor)
     {
         this.transform.parent = baseActor.backPosition;

@@ -10,9 +10,7 @@ public class SpawnObject : MonoBehaviour
     public int maxObj;
     private float timeDelaySpawn;
     public float timeDelay;
-    public List<Stack> stacks;
-    // Start is called before the first frame update
-    // Update is called once per frame
+  
     void Start()
     {
         timeDelaySpawn = timeDelay;
@@ -48,7 +46,6 @@ public class SpawnObject : MonoBehaviour
     {
         var g = AllPoolContainer.Instance.Spawn(stack, this.transform.position, transform.rotation);
         (g as Stack).spawnObject = this;
-        stacks.Add(g as Stack);
         numObj++;
     }
 }
