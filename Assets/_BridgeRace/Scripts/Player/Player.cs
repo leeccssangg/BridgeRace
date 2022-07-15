@@ -55,6 +55,7 @@ public class Player : BaseActor
         {
             if(c.TryGetComponent(out Stack stack))
             {
+                if(stack.spawnObject.spawnType == SpawnType.PLAYER)
                 if (!stacks.Contains(stack))
                 {
                     objHave++;

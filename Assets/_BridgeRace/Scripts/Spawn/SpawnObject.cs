@@ -10,6 +10,7 @@ public class SpawnObject : MonoBehaviour
     public int maxObj;
     private float timeDelaySpawn;
     public float timeDelay;
+    public SpawnType spawnType;
   
     void Start()
     {
@@ -35,7 +36,7 @@ public class SpawnObject : MonoBehaviour
         {
             timeDelaySpawn -= Time.deltaTime;
         }
-        if (timeDelaySpawn < 0)
+        if (timeDelaySpawn <= 0)
         {
             spawnAble = true;
             timeDelaySpawn = timeDelay;
@@ -48,4 +49,12 @@ public class SpawnObject : MonoBehaviour
         (g as Stack).spawnObject = this;
         numObj++;
     }
+}
+
+public enum SpawnType
+{
+    PLAYER,
+    E1,
+    E2,
+    E3
 }

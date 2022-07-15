@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BaseEnemy : AllPool
 {
+    public Transform backPosition;
+    public int objHave;
+    public SpawnType spawnType;
+    public List<Stack> stacks;
     public FsmSystem fsm = new FsmSystem();
     public static string IDLE_STATE = "idle_state";
     public static string COLLECT_STATE = "collect_state";
